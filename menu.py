@@ -15,11 +15,11 @@ def choice_menu(choice):
         case 4:
             phone_book.add_contact()
         case 5:
-            pass
+            phone_book.change_contact()
         case 6:
             phone_book.remove_contact()
         case 7:
-            pass
+            phone_book.search_name()
         case 0:
             return True
 

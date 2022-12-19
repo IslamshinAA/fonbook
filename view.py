@@ -2,7 +2,11 @@ import phone_book as pb
 
 
 def main_menu():
-
+    print("_________________________________\n"
+          "_        СУПЕР СПРАВОЧНИК       _\n"
+          "_                               _\n"
+          "_________________________________\n"
+          )
     print(' Выберите команду меню: ')
     print('1. Показать телефонную книгу: ')
     print('2. Загрузить телефонную книгу: ')
@@ -38,9 +42,9 @@ def print_phone_book():
         print()
 
 def input_new_conact():
-    name = input("Введите имя контакта: ")
-    phone = input('Введите телефон контакта: ')
-    comment = input('Введите коментарий для контакта ')
+    name = input("Введите имя (нового) контакта: ")
+    phone = input('Введите (новый) телефон контакта: ')
+    comment = input('Введите (новый) коментарий для контакта ')
     new_contact = [name, phone, comment]
     return new_contact
 
@@ -49,3 +53,15 @@ def input_remove_conact():
     print_phone_book()
     id = int(input("Введите id контакта, который стоит удалить:  "))
     return id
+
+def input_change_contact():
+    print()
+    print_phone_book()
+    id = int(input("Введите id контакта, который стоит изменить:  "))
+    return id
+
+def input_search_name_contact()->str:
+    print()
+    print_phone_book()
+    name = input('Введите имя контакта для Поиска: ')
+    return name
